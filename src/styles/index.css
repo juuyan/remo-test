@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.trans {
+    transition: all .3s;
+}
+
+.trans-flash {
+    transition: all .075s;
+}
