@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/remo-test/static/css/main.07e6bac6.chunk.css",
-    "main.js": "/remo-test/static/js/main.cf44dd82.chunk.js",
-    "main.js.map": "/remo-test/static/js/main.cf44dd82.chunk.js.map",
+    "main.js": "/remo-test/static/js/main.1852cfee.chunk.js",
+    "main.js.map": "/remo-test/static/js/main.1852cfee.chunk.js.map",
     "runtime-main.js": "/remo-test/static/js/runtime-main.6e58ec39.js",
     "runtime-main.js.map": "/remo-test/static/js/runtime-main.6e58ec39.js.map",
     "static/js/2.6911cdcc.chunk.js": "/remo-test/static/js/2.6911cdcc.chunk.js",
     "static/js/2.6911cdcc.chunk.js.map": "/remo-test/static/js/2.6911cdcc.chunk.js.map",
     "index.html": "/remo-test/index.html",
-    "precache-manifest.e9c4d380694bb83d7725af769d742d67.js": "/remo-test/precache-manifest.e9c4d380694bb83d7725af769d742d67.js",
+    "precache-manifest.360f2bf63d46f59381bab6b1433947df.js": "/remo-test/precache-manifest.360f2bf63d46f59381bab6b1433947df.js",
     "service-worker.js": "/remo-test/service-worker.js",
     "static/css/main.07e6bac6.chunk.css.map": "/remo-test/static/css/main.07e6bac6.chunk.css.map",
     "static/media/screenshort.png": "/remo-test/static/media/screenshort.0bffa0bc.png"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6e58ec39.js",
     "static/js/2.6911cdcc.chunk.js",
     "static/css/main.07e6bac6.chunk.css",
-    "static/js/main.cf44dd82.chunk.js"
+    "static/js/main.1852cfee.chunk.js"
   ]
 }
