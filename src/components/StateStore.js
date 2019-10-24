@@ -26,6 +26,9 @@ function reducer(state, action) {
     case 'approveMeeting':
       newState.users[action.userKey].meetingApproved = true
       return newState
+    case 'setAvatarHighlight':
+      newState.users[action.userKey].highlight = action.highlight
+      return newState
     default:
       throw new Error()
   }
@@ -51,6 +54,7 @@ const initialState = {
         y: 263,
       },
       opening: true,
+      highlight: false,
     },
     luna: {
       userKey: 'luna',
@@ -69,6 +73,7 @@ const initialState = {
         y: 352,
       },
       opening: true,
+      highlight: false,
     },
   },
 }

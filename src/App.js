@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="relative h-screen w-screen overflow-scroll bg-black">
-      <div className="relative">
+      <div className="relative" style={{ minWidth: 1440 }}>
         <img src={bg} style={{ minWidth: 1440 }} />
         {userAvatars}
         <div className="absolute right-0 bottom-0 mr-22">

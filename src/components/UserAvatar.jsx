@@ -23,6 +23,7 @@ export default ({ user }) => {
     connecting,
     meetingApproved,
     coord,
+    highlight,
   } = user
   const { x, y } = coord
 
@@ -37,7 +38,7 @@ export default ({ user }) => {
 
   return (
     <div
-      className="absolute w-5 h-5 rounded-full cursor-pointer"
+      className={`absolute w-5 h-5 rounded-full cursor-pointer ${highlight ? 'border-4 border-primary' : ''}`}
       style={{ top: y, left: x }}
       onMouseEnter={() => setEnable(true)}
       onMouseLeave={() => setEnable(false)}
@@ -91,9 +92,7 @@ export default ({ user }) => {
               ),
               meetingApproved && (
                 <a href="https://calendly.com/juuyan/60min" target="_blank">
-                  <Button icon={faCalendar}>
-                    Schedule meeting
-                  </Button>
+                  <Button icon={faCalendar}>Schedule meeting</Button>
                 </a>
               ),
             ]}
