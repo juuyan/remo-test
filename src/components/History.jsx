@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHistory, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faHistory, faTimes, faUserFriends } from '@fortawesome/free-solid-svg-icons'
 
 const logsData = [
   { name: 'John Starbucks', color: '#6807f9', position: 'Full-stack Developer at Segment' },
-  { name: 'Macheal K.', color: '#fcd307', position: 'Tech Lead at TechTalent' },
-  { name: 'Luna Christin', color: '#01d28e', position: 'Senior Designer at Muji' },
+  { name: 'Macheal K.', color: '#fcd307', position: 'Tech Lead at TechTalent', offline: true, connected: true },
+  { name: 'Luna Christin', color: '#01d28e', position: 'Senior Designer at Muji', connected: true },
   { name: 'Julia Alex', color: '#c886e5', position: 'Recruiter at TechTalent' },
   { name: 'Max Lin', color: '#ff935c', position: 'Marketing Designer at Saleforce' },
 ]
 
 export default () => {
   const [opening, setOpening] = useState(false)
-  const logs = logsData.map((log, i) => <Log name={log.name} color={log.color} position={log.position} />)
+  const logs = logsData.map((log, i) => (
+    <Log
+      name={log.name}
+      color={log.color}
+      position={log.position}
+      offline={log.offline ? true : false}
+      connected={log.connected ? true : false}
+    />
+  ))
   return (
     <div className="mx-1">
       {!opening ? (
@@ -37,12 +45,19 @@ export default () => {
   )
 }
 
-const Log = ({ name, color, position }) => (
+const Log = ({ name, color, position, offline, connected }) => (
   <div className="relative px-1.5 pt-1 text-sm bg-white flex cursor-pointer hover:bg-lighter">
     <div className="#avatar h-2.5 w-2.5 mr-1 rounded-full flex-none" style={{ backgroundColor: color }} />
-    <div className='flex-1 pb-1 border-b border-light'>
-      <div className="font-semibold leading-tight">{name}</div>
-      <div className="text-dark leading-tight">{position}</div>
+    <div className="flex-1 pb-1 border-b border-light">
+      <div className="flex items-center">
+        <div className={`${offline ? 'text-dark' : ''} font-semibold leading-tight`}>{name}</div>
+        {connected && (
+          <div className={`${offline ? 'text-gray' : 'text-dark'} ml-0.5 leading-none`}>
+            <FontAwesomeIcon icon={faUserFriends} />
+          </div>
+        )}
+      </div>
+      <div className={`${offline ? 'text-gray' : 'text-dark'} leading-tight`}>{position}</div>
     </div>
   </div>
 )

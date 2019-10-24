@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faComment, faUserFriends } from '@fortawesome/free-solid-svg-icons'
+import { faComment, faUserFriends, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { appContext } from './StateStore'
 import Button, { Buttons } from './Button'
 
@@ -23,7 +23,6 @@ export default ({ user }) => {
     connecting,
     meetingApproved,
     coord,
-    boxIndex,
   } = user
   const { x, y } = coord
 
@@ -89,6 +88,13 @@ export default ({ user }) => {
                     {connecting ? 'Pending' : 'Connect'}
                   </Button>
                 </div>
+              ),
+              meetingApproved && (
+                <a href="https://calendly.com/juuyan/60min" target="_blank">
+                  <Button icon={faCalendar}>
+                    Schedule meeting
+                  </Button>
+                </a>
               ),
             ]}
           />
