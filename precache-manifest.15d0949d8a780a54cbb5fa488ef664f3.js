@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc58a00eaa2c03a26c2d7bd6efe209bf",
+    "revision": "1f20b04f6f8c96f3bd2c2075110d674f",
     "url": "/remo-test/index.html"
   },
   {
-    "revision": "e19b7e5e862e31038be6",
+    "revision": "533b60cd159e24acd272",
     "url": "/remo-test/static/css/main.07e6bac6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/remo-test/static/js/2.6911cdcc.chunk.js"
   },
   {
-    "revision": "e19b7e5e862e31038be6",
-    "url": "/remo-test/static/js/main.1960451a.chunk.js"
+    "revision": "533b60cd159e24acd272",
+    "url": "/remo-test/static/js/main.8216fad1.chunk.js"
   },
   {
     "revision": "3747012d12ba66e7d69f",
