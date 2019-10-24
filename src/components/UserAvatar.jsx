@@ -76,7 +76,9 @@ export default ({ user }) => {
           <Buttons
             gap={0.5}
             btns={[
-              <Button icon={faComment}>Chat</Button>,
+              <div onClick={handleClick}>
+                <Button icon={faComment}>Chat</Button>
+              </div>,
               !connected && (
                 <div
                   onClick={() => {
