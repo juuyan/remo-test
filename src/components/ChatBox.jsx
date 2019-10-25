@@ -75,6 +75,7 @@ export default ({ user }) => {
           <div className="p-1.5 pb-3">
             <Balloon w={22} />
             <Balloon w={16} color={color} />
+            {connecting && <Balloon>Hey I have just added you at LinkedIn.</Balloon>}
             {!proposeReceived && meetingApproved && (
               <>
                 <Balloon>What about scheduling a meeting?</Balloon>
